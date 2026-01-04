@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./simple-styles.css" />
+    <title>Pokemon Search App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="app-title">Gotta Catch 'Em All!</h1>
+      <div class="description">
+        <p>
+          Search for any Pokemon by name or ID number to discover their type,
+          abilities and description
+        </p>
+        <div class="search-container">
+          <div class="input-wrapper">
+            <input
+              id="pokemon-input"
+              type="text"
+              placeholder="Start typing name or ID"
+            />
+            <button id="clear-btn">x</button>
+            <div id="suggestion"></div>
+          </div>
+          <button id="search-btn">Search</button>
+        </div>
+      </div>
+      <div id="pokemon-result"></div>
+    </div>
+
+    <script src="./simple-scripts.js"></script>
+  </body>
+</html>
