@@ -7,27 +7,74 @@
     <title>Pokemon Search App</title>
   </head>
   <body>
-    <div class="container">
-      <h1 id="app-title">Gotta Catch 'Em All!</h1>
-      <div class="description">
-        <p>
-          Search for any Pokemon by name or ID number to discover their type,
-          abilities and description
-        </p>
-        <div class="search-container">
+    <div class="app-container">
+      <!-- LEFT PANEL: Search & Controls -->
+      <div class="left-panel">
+        <h1>Pokémon</h1>
+        <div class="description">
+          <p>Search to discover!</p>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search-box">
           <div class="input-wrapper">
-            <input
-              id="pokemon-input"
-              type="text"
-              placeholder="Start typing name or ID"
-            />
-            <button id="clear-btn">x</button>
-            <div id="suggestion"></div>
+            <input type="text" id="pokemon-input" placeholder="Name or ID" />
+            <button id="clear-btn">×</button>
+            <div id="suggestions"></div>
           </div>
-          <button id="search-btn">Search</button>
+          <button id="search-btn">🔍</button>
+          <button id="random-btn">🎲</button>
         </div>
       </div>
-      <div id="pokemon-result"></div>
+
+      <!-- RIGHT PANEL: Pokemon Details -->
+      <div class="right-panel">
+        <div id="pokemon-result" class="result-content">
+          <div class="welcome-message">
+            <h2>👋 Welcome to Pokémon Search!</h2>
+            <p>Search for a Pokémon to discover its details</p>
+
+            <div class="welcome-tips">
+              <h3>How to Search:</h3>
+              <ul>
+                <li>
+                  <strong>By Name:</strong> "pikachu", "charizard", "dragonite"
+                </li>
+                <li><strong>By ID:</strong> "25", "6", "149"</li>
+                <li>
+                  <strong>🎲 Random:</strong> Click for a surprise Pokémon
+                </li>
+              </ul>
+            </div>
+
+            <div class="welcome-features">
+              <h3>What You'll See:</h3>
+              <ul>
+                <li>
+                  📊 <strong>Base Stats</strong> - Attack, Defense, Speed, etc.
+                </li>
+                <li>
+                  🔥 <strong>Type Effectiveness</strong> - Strong & weak
+                  matchups
+                </li>
+                <li>
+                  🔗 <strong>Evolution Chain</strong> - Pre-evolution &
+                  evolutions
+                </li>
+                <li>
+                  💪 <strong>Moves</strong> - Moves this Pokémon can learn
+                </li>
+              </ul>
+            </div>
+
+            <p class="welcome-hint">
+              Try searching for "pikachu" or "25" to get started! ⚡
+            </p>
+          </div>
+        </div>
+        <div id="type-chart" class="type-chart"></div>
+        <div id="evolution-chain" class="evolution-chain"></div>
+      </div>
     </div>
 
     <script src="./scripts.js"></script>
